@@ -4,6 +4,9 @@
     padding: 0;
     box-sizing: border-box;
 }
+::after, ::before{
+    box-sizing: border-box;
+}
 body{
     font-family: 'TATSanaSuksa';
     font-weight: bold;
@@ -106,6 +109,9 @@ header div:nth-child(2) > img{
     font-size: 16px;
 }
 
+#footer-logo{
+    margin-right: 10rem;
+}
 
 #content button#content-news{
     width: 800px;
@@ -139,8 +145,20 @@ header div:nth-child(2) > img{
     margin: 0;
     padding: 0;
 }
-/* #contentTitle{
+
+/* #contentGWallet div img, #contentSecurity div img{
+    width: 100%;
+    height: 100%;
+}
+#telLogo div img{
+    width: 100%;
+    height: 100%;
+}
+#contentVideoPR div iframe{
+    width: 100%;
+    height: 100%;
 } */
+
 #contentTitle h1{
     line-height: 64.8px;
 }
@@ -162,7 +180,9 @@ header div:nth-child(2) > img{
     width: 650px;
     height: 365px;
 }
-#logos{ 
+#logos{
+    margin-top: 100px;
+    margin-bottom: 100px;
     text-align: center;
     display: grid;
     grid-template-columns: repeat(6, 1fr);
@@ -170,6 +190,51 @@ header div:nth-child(2) > img{
 #logos div img{
     width: 102px;
 }
+
+#footer-contact{
+    margin-top: 30px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #213A8F;
+}
+
+#footer-contact div.container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+#footer-contact div ul{
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+#footer-contact ul a{
+    list-style: none;
+    display: inline-block;
+    color: #ffffff;
+    flex: 0 0 25%;
+}
+
+footer{
+    width: 100%;
+    background-color: #FAFAFA;
+    padding: 30px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+}
+
+footer div.footer-main{
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+
 .mr-24{
     margin: 24px;
     line-height: 32px;
@@ -219,4 +284,247 @@ header div:nth-child(2) > img{
 
 .box-element{
     margin-top: 1.5rem;
+}
+
+.footer-detail{
+    max-width: 25%;
+    padding: 0 15px;
+    color: #333333;
+}
+.footer-detail h4{
+    font-size: 16px;
+    color: red;
+}
+.footer-detail p{
+    font-weight: 300;
+    font-size: 16px;
+}
+.footer-detail  a{
+    text-decoration: none;
+    color: #333333;
+}
+
+@media (max-width: 577px){
+    h1{
+        font-size: 30px;
+    }
+    h2{
+        font-size: 24px;
+        line-height: 31.2px;
+    }
+    .detail, span.title{
+        font-size: 14px;
+    }
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    #logos{
+        grid-template-columns: 1fr;
+    }
+    .flex-display{
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    #content{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #content button#content-news{
+        width: 100%;
+        font-size: 18px;
+        padding: 0;
+    }
+    iframe#video{
+        width: 206px;
+        height: 145px;
+    }
+    #contentGWallet div img, #contentSecurity div img{
+        width: 100%;
+        height: 100%;
+    }
+    #telLogo div img{
+        width: 100%;
+        height: 100%;
+    }
+    #contentVideoPR div{
+        width: 100%;
+    }
+    #contentVideoPR div:first-child iframe{
+        width: 100%;
+        height: 100%;
+        margin: 0 auto;
+    }
+    #telLogo div img{
+        width: 100%;
+        height: 100%;
+    }
+    header div.header-el{
+        flex: 0 0 33.33%;
+        display: flex;
+        max-width: 33.33%;
+        text-align: center;
+        align-items: center;
+        padding: 6px;
+    }
+    header div.header-el img{
+        width: 110px;
+        height: 131px;
+        vertical-align: middle;
+        padding: 0;
+        flex: 0 0 100%;
+    }
+    #contentShopSearch.flex-display, #contentGWallet.flex-display{
+        flex-wrap: wrap-reverse;
+    }
+    #contentShopSearch div, #contentGWallet.flex-display div{
+        margin-top: 22px;
+        flex: 0 0 100%;
+    }
+    #appDownload{
+        margin: 0;
+    }
+    #appDownload.flex-display img{
+        width: 130px;
+        margin: 0 auto;
+    }
+    #appUsage{
+        width: 100%;
+        text-align: center;
+    } 
+    #contentSecurity{
+        text-align: center;
+    }
+    #footer-contact div ul{
+        flex-wrap: wrap;
+    }
+    #footer-contact div ul a{
+        margin-top: 12px;
+        flex: 0 0 100%;
+        font-size: 12px;
+    }
+    .footer-detail h4, .footer-detail p{
+        font-size: 12px;
+    }
+    .footer-detail{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 800px){
+    .detail, span.title{
+        font-size: 18px;
+    }
+    .container{
+        margin-left: 0;
+        margin-right: 0;
+        padding: 0 50px;
+    }
+    #logos{
+        grid-template-columns: repeat(1fr, 6);
+    }
+    .flex-display{
+        flex-wrap: nowrap;
+        width: 100%;
+    }
+    #content{
+        padding-left: 8px;
+        padding-right: 8px;
+    }
+    #content button#content-news{
+        width: 100%;
+        font-size: 18px;
+        padding: 0;
+    }
+    iframe#video{
+        width: 206px;
+        height: 145px;
+    }
+    #contentGWallet div img{
+        width: 100%;
+        height: 100%;
+    }
+    #contentSecurity div img{
+        width: 100%;
+        height: 50%;
+    }
+    #telLogo div img{
+        width: 100%;
+        height: 100%;
+    }
+    #contentVideoPR div{
+        width: 100%;
+    }
+    #contentVideoPR div:first-child iframe{
+        width: 100%;
+        height: 50%;
+        margin: 0 auto;
+    }
+    #telLogo div img{
+        width: 100%;
+        height: 100%;
+    }
+    header div.header-el{
+        flex: 0 0 33.33%;
+        display: flex;
+        max-width: 33.33%;
+        text-align: center;
+        align-items: center;
+        padding: 6px;
+    }
+    header div.header-el img{
+        width: 110px;
+        height: 131px;
+        vertical-align: middle;
+        padding: 0;
+        flex: 0 0 100%;
+    }
+    #contentShopSearch.flex-display, #contentGWallet.flex-display{
+        flex-wrap: wrap-reverse;
+    }
+    #contentShopSearch div, #contentGWallet.flex-display div{
+        margin-top: 22px;
+        flex: 0 0 50%;
+    }
+    #appDownload{
+        margin: 0;
+    }
+    #appDownload.flex-display img{
+        width: 130px;
+        margin: 0 auto;
+    }
+    #appUsage{
+        width: 100%;
+        text-align: center;
+    } 
+    #contentSecurity{
+        text-align: left;
+    }
+    #footer-contact div ul{
+        flex-wrap: wrap;
+    }
+    #footer-contact div ul a{
+        margin-top: 12px;
+        flex: 0 0 100%;
+        font-size: 12px;
+    }
+    .footer-detail h4, .footer-detail p{
+        font-size: 14px;
+    }
+    .footer-detail{
+        margin-top: 20px;
+        margin-bottom: 50px;
+        max-width: 100%;
+        line-height: 22px;
+        flex: 0 0 25%;
+    }
+    footer div.footer-main{
+        margin-top: 30px;
+        margin-bottom: 200px;
+    }
+    #footer-logo{
+        margin-right: 2rem;
+    }
 }
