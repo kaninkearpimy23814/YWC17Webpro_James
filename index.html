@@ -1,7 +1,17 @@
 <html>
     <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+            <meta property="og:url" content="https://www.ชิมช้อปใช้.com/">
+            <meta property="og:type" content="website">
+            <meta property="og:title" content="มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”">
+            <meta property="og:description" content="ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62">
+            <meta property="og:image" content="./img/share/Share_Social.png">
+            <meta property="title" content="มาตรการส่งเสริมการท่องเที่ยวในประเทศ “ชิมช้อปใช้”">
+            <meta property="description" content="ผู้สนใจเข้าร่วมมาตรการฯ สามารถลงทะเบียน ตั้งแต่ วันที่ 23 ก.ย. - 15 พ.ย. 62">
+            <meta property="image" content="./img/share/Share_Social.png">
         <title>
-            ชิมช็อปใช้
+            ลงทะเบียนเข้าร่วมมาตรการ ชิมช้อปใช้
         </title>
         <link rel="stylesheet" href="fontawesome/css/all.min.css">
         <link rel="stylesheet" href="fontawesome/css/solid.min.css">
@@ -9,12 +19,24 @@
     </head>
 
     <body>
-            <nav>
-                <ul>
-                    <li><a href="#">ลงทะเบียนเข้าร่วมมาตรการ</a></li>
-                    <li><a href="#">ขั้นตอนการเข้าร่วม</a></li>
-                    <li><a href="#">ร้านค้าที่เข้าร่วม</a></li>
+            <nav id="navDesktop">
+                <ul class="menu">
+                        <!-- JSON fetch -->
                 </ul>
+            </nav>
+            <nav id="navMobile" class="slideDownNav">
+                <div>
+                    <img src="https://www.ชิมช้อปใช้.com/img/logo/footer.png" />
+                </div>
+                <div>
+                    <a class="icon">
+                        <i class="fa fa-bars fa-3x" onclick="toggleNav()"></i>
+                    </a>
+                    <ul id="menuMobile" class="menu noneSlide">
+                        <!-- JSON fetch -->
+                    </ul>
+        
+                </div>
             </nav>
             <header>
 
@@ -37,8 +59,8 @@
                 <p>ตั้งแต่วันที่</p>
             </div>
             <div>
-                <h1>
-                    27 ก.ย. - 31 ธ.ค. 62
+                <h1 id="duration">
+                    
                 </h1>
             </div>
             <button id="content-news">
@@ -60,28 +82,20 @@
                     <br />
                     ในประเทศ <span>"ชิมช็อปใช้"</span>
                 </h2>
-                <div class='detail'>
-                    ผู้สนใจเข้าร่วมมาตรการส่งเสริมการบริโภคในประเทศ 
-                    <span class="nowrap" style="">“ชิมช้อปใช้”</span> 
-                    รับเงินผ่าน <span class="nowrap" style="">“เป๋าตัง”</span> 
-                    <span class="nowrap" style="">(G-Wallet)</span> 
-                    รวมจำนวน 13 ล้านคน  ลงทะเบียนรับสิทธิ ได้ทางเว็บไซต์ 
-                    <span class="nowrap" style="">www.ชิมช้อปใช้.com</span> 
-                    <br> ตั้งแต่วันที่ 23 กันยายน  - 15 พฤศจิกายน 2562 (รับลงทะเบียน เฟส 2 ตั้งแต่วันที่ 24 ตุลาคม 2562 จำกัดจำนวนผู้ลงทะเบียน 1 ล้านคนต่อวัน จนกว่าจะครบ 3 ล้านคน)
+                <div class='detail' id="detail">
+                    
                 </div>
             </div>
             <div class='box-element'>
                 <span class="title">
                     เงื่อนไขการเข้าร่วมมาตรการ
                 </span>
-                <div class="detail">
-                        1. เป็นบุคคลสัญชาติไทย มีบัตรประจำตัวประชาชน<br>
-                        2. มีอายุตั้งแต่ 18 ปีบริบูรณ์ขึ้นไป ณ วันที่ลงทะเบียน<br>
-                        3. มีโทรศัพท์มือถือสมาร์ทโฟนที่สามารถเชื่อมต่อสัญญาณอินเทอร์เน็ตและมีอีเมล
+                <div class="detail" id="condition">
+                        
                 </div>
             </div>
         </div>
-        <div id="contentShopSearch" class="container flex-display">
+        <!-- <div id="contentShopSearch" class="container flex-display">
             <div>
                 <h2>ค้นหารายชื่อร้าน</h2>
                 <button class="content-button">
@@ -89,7 +103,9 @@
                     <i class="fas fa-caret-right"></i>
                 </button>
             </div>
-            <img src="https://www.xn--b3caa1e2a7e2b0h2be.com/img/banner_store.png" alt="banner">
+            <div>
+                <img src="https://www.xn--b3caa1e2a7e2b0h2be.com/img/banner_store.png" alt="banner">
+            </div>
         </div>
         <div id='contentVideoPR' class="container flex-display">
             <div>
@@ -146,8 +162,12 @@
                     </ol>
                 </div>
                 <div id="appDownload" class='mr-24 flex-display' style="text-align: left;">
-                    <img width="168" height="50" style="margin-right: 12px;" src="https://www.ชิมช้อปใช้.com/img/AppStore.png" alt="App Store">
-                    <img width="168" height="50" src="https://www.ชิมช้อปใช้.com/img/GooglePlay.png" alt="Play Store">
+                    <a href="https://apps.apple.com/th/app/%E0%B9%80%E0%B8%9B-%E0%B8%B2%E0%B8%95-%E0%B8%87/id1324902182?l=th">
+                        <img width="168" height="50" style="margin-right: 12px;" src="https://www.ชิมช้อปใช้.com/img/AppStore.png" alt="App Store">
+                    </a>
+                    <a href="https://play.google.com/store/apps/details?id=com.ktb.customer.qr">
+                        <img width="168" height="50" src="https://www.ชิมช้อปใช้.com/img/GooglePlay.png" alt="Play Store">
+                    \</a>
                 </div>
             </div>
         </div>  
@@ -155,36 +175,36 @@
             ใช้แอปพลิเคชั่น <span class="nowrap">“เป๋าตัง”</span> ชำระค่าสินค้าและบริการ <br>
             ชำระค่าสินค้าและบริการได้เฉพาะกับร้านค้าที่ใช้แอปพลิเคชั่น “ถุงเงิน” เท่านั้น<br>
             <span style="color: red;">ใช้สิทธิได้ตั้งแต่ 27 ก.ย. - 31 ธ.ค. 62</span>
-        </div>
+        </div> -->
         <div id="telLogo" class="container flex-display">
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/Banner_KTB_SQ.png" alt="">
+                <a href="tel:021111144"><img src="https://www.xn--b3caa1e2a7e2b0h2be.com/img/Banner_KTB_SQ.png" alt="" ></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/Banner_CGD_Sq.png" alt="">
+                <a href="tel:022706400"><img src="https://www.xn--b3caa1e2a7e2b0h2be.com/img/Banner_CGD_Sq.png" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/Banner_TAT_Hotline_Sq.png" alt="">
+                <a href="tel:1672" ><img src="https://www.xn--b3caa1e2a7e2b0h2be.com/img/Banner_TAT_Hotline_Sq.png" alt=""></a>
             </div>
         </div>
         <div id="logos" class="container flex-display">
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/MOF.png" alt="">
+                <a href="http://mof.go.th/th/home"><img src="image/MOF.gif" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/FPO.png" alt="">
+                <a href="http://www.fpo.go.th/"><img src="image/FPO.gif" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/CGD.png" alt="">
+                <a href="https://www.cgd.go.th/"><img src="image/CGD.gif" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/Krungthai.png" alt="">
+                <a href="https://www.newcb.ktb.co.th/"><img src="image/Krungthai.gif" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/MOTS.png" alt="">
+                <a href="https://www.mots.go.th/"><img src="image/MOTS.gif" alt=""></a>
             </div>
             <div>
-                <img src="https://www.ชิมช้อปใช้.com/img/brand-logo/TAT.png" alt="">
+                <a href="https://thai.tourismthailand.org/"><img src="image/TAT.gif" alt=""></a>
             </div>
     
         </div>
@@ -211,11 +231,8 @@
             </div>
             <div id="footer-contact"> 
                 <div class="container">
-                    <ul>
+                    <ul id="footerNav">
                         <a><li>Copyright © 2003-2019</li></a>
-                        <a><li>ลงทะเบียนเข้าร่วมมาตรการ</li></a>
-                        <a><li>ขั้นตอนการเข้าร่วมทั้งหมด</li></a>
-                        <a><li>รายชื่อร้านค้าที่เข้าร่วมรายการ</li></a>
                     </ul>
                 </div>
             </div>
@@ -225,10 +242,23 @@
 
 <script src="./js/main.js"></script>
 <script type="text/javascript">
-if('serviceWorker' in navigator){
-    console.log("service worker installed.")
-}
-self.addEventListener("install", event => {
-    console.log("Service Worker Install !!!")
-})
+    var dataRetrive
+    var menuItem, duration, detail, condition
+    if(Storage !== 'undefined' && localStorage.key(0) !== 'jsonObj'){
+        var data = loadJson()
+        localStorage.setItem('jsonObj', JSON.stringify(data))
+        menuItem = data.navbarItems
+        duration = data.duration
+        detail = data.detail
+        condition = data.condition
+        console.log('save local storage success.')
+    }else{
+        var data = JSON.parse(localStorage.getItem('jsonObj'))
+        menuItem = data.navbarItems
+        duration = data.duration
+        detail = data.detail
+        console.log('retrieve from storage.')
+    }
+    appendMenu(menuItem)
+    appendDetail(duration, detail, condition)
 </script>
