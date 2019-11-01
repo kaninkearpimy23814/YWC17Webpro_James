@@ -4,6 +4,10 @@
     padding: 0;
     box-sizing: border-box;
 }
+@font-face {
+    font-family: TATSanaSuksa;
+    src: url(../font/TATSanaChon-Regular.woff2);
+ }
 ::after, ::before{
     box-sizing: border-box;
 }
@@ -383,7 +387,8 @@ footer div.footer-main{
     .container{
         margin-left: 0;
         margin-right: 0;
-        padding: 0 50px;
+        padding-top: 0;
+        padding-left: 50px;
     }
     #logos{
         grid-template-columns: repeat(1fr, 6);
@@ -487,6 +492,13 @@ footer div.footer-main{
     }
 }
 @media screen and (max-width: 800px){
+    #contentTitle{
+        margin: 0 auto;
+    }
+    #contentTitle.container{
+        padding-left: 20px;
+        padding-top: 0;
+    }
     #nav#navDesktop{
         display: none;
     }
@@ -511,6 +523,9 @@ footer div.footer-main{
     }
 }
 @media screen and (max-width: 577px){
+    header{
+        margin-top: 0;
+    }
     #nav#navDesktop{
         display: none;
     }
