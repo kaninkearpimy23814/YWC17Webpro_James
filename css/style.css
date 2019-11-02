@@ -492,6 +492,15 @@ footer div.footer-main{
     }
 }
 @media screen and (max-width: 800px){
+    body{
+        overflow-x: hidden;
+    }
+    nav#navDesktop{
+        display:none;
+    }
+    header{
+        margin-top: 0;
+    }
     #contentTitle{
         margin: 0 auto;
     }
