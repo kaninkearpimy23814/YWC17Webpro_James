@@ -1,3 +1,26 @@
+var tagBody = '(?:[^"\'>]|"[^"]*"|\'[^\']*\')*';
+
+var tagOrComment = new RegExp(
+    '<(?:'
+    // Comment body.
+    + '!--(?:(?:-*[^->])*--+|-?)'
+    // Special "raw text" elements whose content should be elided.
+    + '|script\\b' + tagBody + '>[\\s\\S]*?</script\\s*'
+    + '|style\\b' + tagBody + '>[\\s\\S]*?</style\\s*'
+    // Regular name
+    + '|/?[a-z]'
+    + tagBody
+    + ')>',
+    'gi');
+function removeTags(html) {
+  var oldHtml;
+  do {
+    oldHtml = html;
+    html = html.replace(tagOrComment, '');
+  } while (html !== oldHtml);
+  return html.replace(/</g, '&lt;');
+}
+
 var publicData
 var a
 toggleNav = () =>{
@@ -61,8 +84,19 @@ loadJson = () => {
     var destination = "https://panjs.com/ywc.json"
     httpRequest.open("GET", destination, false)
     httpRequest.send()
-    
+
     var data = JSON.parse(httpRequest.responseText)
+    for(var i in data){
+        if(typeof(data[i]) == "object"){
+            for(u in data[i]){
+                for(l in data[i][u]){
+                    data[i][u][l] = removeTags(data[i][u][l])
+                }
+            }
+        }else{
+                data[i] = removeTags(data[i])
+        }
+    }
     return data
     // var f = fetch(destination).then((data) =>{
     //     return data.json()
@@ -141,3 +175,5 @@ loadJson = () => {
 //             console.log(store.result.value)
 //         }
 //     }
+
+
